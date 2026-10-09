@@ -438,7 +438,7 @@ with left:
 with right:
     if st.button(
         "📋 Create style summary",
-        disabled=len(st.session_state.messages) <= 1,
+        disabled=len(st.session_state.messages) < 2,
         use_container_width=True,
     ):
         st.session_state.style_summary = build_conversation_summary()
